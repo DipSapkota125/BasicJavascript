@@ -42,8 +42,13 @@
 // let find = name + y;
 // console.log(find);
 
-const name = "Dip";
-const surname = "Sapkota";
-console.log("My name is : " + name + " " + surname + ".");
-const myGreeting = `My name is ${name} ${surname} .`;
-console.log(`Hello Everyone : ${myGreeting}`);
+// const name = "Dip";
+// const surname = "Sapkota";
+// console.log("My name is : " + name + " " + surname + ".");
+// const myGreeting = `My name is ${name} ${surname} .`;
+// console.log(`Hello Everyone : ${myGreeting}`);
+
+let name = "Amrit Gurung";
+console.log(name);
+console.log(typeof name);
+console.log(typeof Number(name));
