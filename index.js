@@ -48,7 +48,44 @@
 // const myGreeting = `My name is ${name} ${surname} .`;
 // console.log(`Hello Everyone : ${myGreeting}`);
 
-let name = "Amrit Gurung";
-console.log(name);
-console.log(typeof name);
-console.log(typeof Number(name));
+// let name = "Amrit Gurung";
+// console.log(name);
+// console.log(typeof name);
+// console.log(typeof Number(name));
+
+//type conversion and strings methods
+
+// let number = 678;
+// console.log(number);
+// console.log(typeof String(number));
+// console.log(typeof number.toString());
+
+//Strings method
+let str = "Hello, World!,Nepathya";
+let y = "How Are You?";
+let z = "    How is Your Life    ";
+
+//charAt
+// console.log(str.charAt(0));
+//length
+// console.log(str.length);
+//concat
+// console.log(str.concat(y));
+//replace
+// console.log(str.replace("Hello","Hi"))
+//indexof
+// console.log(str.indexOf("o"));
+//lastindexof
+// console.log(str.lastIndexOf("l"));
+//includes
+// console.log(str.includes("Hello"));
+//split
+// console.log(str.split(","));
+//tolowercase
+// console.log(str.toLowerCase());
+//uppercase
+// console.log(str.toUpperCase());
+//trim
+// console.log(z.trim());
+//slice
+// console.log(str.slice(0, 4));
