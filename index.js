@@ -61,9 +61,9 @@
 // console.log(typeof number.toString());
 
 //Strings method
-let str = "Hello, World!,Nepathya";
-let y = "How Are You?";
-let z = "    How is Your Life    ";
+// let str = "Hello, World!,Nepathya";
+// let y = "How Are You?";
+// let z = "    How is Your Life    ";
 
 //charAt
 // console.log(str.charAt(0));
@@ -89,3 +89,10 @@ let z = "    How is Your Life    ";
 // console.log(z.trim());
 //slice
 // console.log(str.slice(0, 4));
+
+const heading = document.getElementById("mycss");
+heading.innerText = "We miss Chadwick Boseman!";
+
+heading.style.background = "red";
+heading.style.color = "white";
+heading.style.textAlign = "center";
