@@ -90,12 +90,12 @@
 //slice
 // console.log(str.slice(0, 4));
 
-const heading = document.getElementById("mycss");
-heading.innerText = "We miss Chadwick Boseman!";
+// const heading = document.getElementById("mycss");
+// heading.innerText = "We miss Chadwick Boseman!";
 
-heading.style.background = "red";
-heading.style.color = "white";
-heading.style.textAlign = "center";
+// heading.style.background = "red";
+// heading.style.color = "white";
+// heading.style.textAlign = "center";
 
 //condition(if else)
 // let email = "dipsapkota325gmail.com";
@@ -242,3 +242,92 @@ heading.style.textAlign = "center";
 //     console.log("Invalid month");
 //     break;
 // }
+
+//loop
+
+//for loop
+// for (let i = 1; i<=10; i++ ) {
+//       console.log(i)
+
+// }
+
+//while
+
+// let x = 0;
+// while (x<5) {
+//       console.log(x)
+//       i++;
+
+// }
+
+//do while
+// let x = 5;
+// do {
+//   console.log("hello world");
+// } while (x < 5);
+
+//array
+
+// const myArr = [4, 3, 6, 7, 9, 3, 2, 1,14, 12];
+// console.log(myArr.length);
+
+// const newArr = ["Shyam", "Geeta", "Sita", "Hari"];
+// console.log(newArr);
+//push method
+// const newAdd = newArr.push("Iron Man");
+// console.log(newAdd);
+
+//unshift method
+
+// let newArr = ["Chadwick", "Amrit", "Bartika", "Trishna"];
+// console.log(newArr.unshift("Captain America"));
+// console.log(newArr);
+
+//pop method
+// const newArr = [3, 8, 9, 4, 6, 34];
+// console.log(newArr);
+// const newData = newArr.pop();
+// console.log(newData);
+
+//shift
+// const newArr = [67, 4, 5, 7, 9, 8];
+// const newVar = newArr.shift();
+// console.log(newVar);
+// console.log(newArr);
+
+//concat method
+// let arr1 = [3, 5, 6, 7, 9];
+// let arr2 = ["Avatar", "James Camron", "Chadke 2.0", "Avengers"];
+
+// console.log(arr1.concat(arr2));
+
+//filter method
+
+// let newArr = [2, 7, 8, 9, 5, 3, 67, 23, 98, 45];
+// console.log(newArr);
+// const findFilter = newArr.filter((n) => n > 5);
+// console.log(findFilter);
+// console.log(newArr);
+
+//splice method
+// const newArr = [5, 7, 8, 4, 3, 9, 5];
+// console.log(newArr);
+// const newData = newArr.splice(2, 3);
+// console.log(newData);
+// console.log(newArr);
+
+//reverse method
+// const newArr = [6, 9, 5, 10, 4, 3, 1, 2];
+// console.log(newArr);
+// const newData = newArr.reverse();
+// console.log(newData);
+// console.log(newArr);
+
+//sort method
+
+const newArr = [7, 9, 4, 3, 2, 5, 10];
+console.log(newArr);
+
+const myData = newArr.sort();
+console.log(myData);
+console.log(newArr);
