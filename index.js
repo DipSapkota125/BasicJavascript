@@ -325,9 +325,157 @@
 
 //sort method
 
-const newArr = [7, 9, 4, 3, 2, 5, 10];
-console.log(newArr);
+// const newArr = [7, 9, 4, 3, 2, 5];
+// console.log(newArr);
 
-const myData = newArr.sort();
-console.log(myData);
-console.log(newArr);
+// const myData = newArr.sort();
+// console.log(myData);
+// console.log(newArr);
+
+//slice method
+
+// const newArr = [5, 3, 6, 9, 2, 8, 7];
+
+// const newValue = newArr.slice(1, 4);
+// console.log(newArr);
+// console.log(newValue);
+
+// let myarr = [];
+
+// myarr[0] = 1;
+// for(let i = 0; i<10; i++){
+//       myarr[i] = i
+//       myarr.push(i)
+// }
+
+//object
+
+// const myProfile = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 23,
+//   isMarried: false,
+//   isSalary: function () {
+//     console.log("mero dherai xaina salary");
+//     return true;
+//   },
+// };
+
+// console.log(myProfile);
+// console.log(myProfile.lastName);
+// console.log(myProfile["age"]);
+
+// const ans = myProfile.isSalary();
+// console.log(ans);
+
+// const car = {
+//   make: "Toyota",
+//   model: "Camry",
+//   color: "red",
+//   runWheel: 4,
+//   isElectric: false,
+//   startEngine: function () {
+//     console.log("Start engine!");
+//     return true;
+//   },
+//   endEngine: function () {
+//     console.log("Stop engine");
+//     return false;
+//   },
+// };
+
+// console.log(car);
+// console.log(car.startEngine());
+// console.log(car.endEngine());
+
+// if (car.startEngine()) {
+//   console.log("Car is ready for running!");
+// } else if (car.endEngine()) {
+//   console.log("Car is not ready for running!");
+// } else {
+//   console.log("Invalid");
+// }
+
+//function
+
+// function MyData() {
+//   let a = 90;
+//   let b = 78;
+//   let result = (a + b) / 2;
+//   console.log(result);
+// }
+//  MyData()
+
+// function newFunc(a, b, c) {
+//   return (a + b + c) / 2;
+// }
+// const ans = newFunc(4, 8, 12);
+// const an2 = newFunc(9, 5, 11);
+
+// console.log(ans);
+// console.log(an2);
+
+// const myValue = function(){
+//       let x = 7;
+//       let y= 9;
+//       let result = x*y;
+//       console.log(result)
+// }
+
+// console.log(myValue)
+
+// function myData(arr = []) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     // total = total + arr[i]
+//     total += arr[i];
+//   }
+//   return total;
+// }
+
+// const ans = myData([5, 7, 8, 3, 7]);
+// console.log(ans);
+
+//scoping
+
+// var x = 90;
+
+// function myVar() {
+//   var x = 9 + 9;
+//   console.log(x);
+// }
+
+// console.log(x);
+
+// myVar();
+
+//var in block case
+
+// function myBlock() {
+//   if (true) {
+//     var x = 9 * 9;
+//     console.log(x);
+//   }
+// }
+
+// myBlock();
+
+//let in block and function scope
+// function myFuc() {
+//   if (true) {
+//     let y = (6 + 6) / 2;
+//     console.log(y);
+//   }
+// }
+
+// myFuc();
+
+//const in block scope
+function myCalc() {
+  if (true) {
+    const x = (9 + 5 - 3) * 3;
+    console.log(x);
+  }
+}
+
+myCalc();
