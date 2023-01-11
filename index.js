@@ -471,11 +471,206 @@
 // myFuc();
 
 //const in block scope
-function myCalc() {
-  if (true) {
-    const x = (9 + 5 - 3) * 3;
-    console.log(x);
-  }
-}
+// function myCalc() {
+//   if (true) {
+//     const x = (9 + 5 - 3) * 3;
+//     console.log(x);
+//   }
+// }
 
-myCalc();
+// myCalc();
+
+//manipulate
+// console.log(document.body.firstElementChild);
+
+// const myHow = document.getElementById("how");
+
+// myHow.innerText = "Chadwick";
+
+// const myYOu = document.getElementsByClassName("heyyou");
+// for (i = 0; i < myYOu.length; i++) {
+//   myYOu[i].innerText = "Rinkiyake papa";
+// }
+
+// const heyDoing = document.getElementsByClassName("letdo");
+// for (let i = 0; i < heyDoing.length; i++) {
+//   heyDoing[i].innerHTML = "Antman and the wasp <b>Quantamania</b>";
+// }
+
+// const myEmail = document.getElementsByName("email");
+// for (i = 0; i < myEmail.length; i++) {
+//   myEmail[i].style.padding = "4px";
+// }
+
+// const mySpan = document.getElementsByTagName("span");
+// mySpan[0].style.color = "yellow";
+// for (let i = 0; i < mySpan.length; i++) {
+//   mySpan[i].innerHTML = "Ronaldo gaye <b>KhadiMuluk</b>";
+// }
+
+// const meroButton = document.getElementById("myBtn");
+// meroButton.style.backgroundColor = "blue";
+// meroButton.style.color = "#fff";
+// meroButton.style.border = "none";
+// meroButton.style.padding = "2vmax 4vmax";
+// meroButton.style.cursor = "pointer";
+
+// console.log(meroButton.getAttribute("id"));
+// console.log(meroButton.getAttribute("class"));
+
+// meroButton.setAttribute("class", "thisisBtn");
+
+// const myLocation = document.createElement("h2");
+// document.body.append(myLocation);
+// myLocation.innerHTML = "<b>Sa karnali</b>";
+// document.body.prepend(myLocation);
+
+// const change = document.querySelector(".heyyou");
+// change.innerText = "likna";
+// change.style.backgroundColor = "red";
+
+// const luZa = document.querySelector("span");
+// luZa.innerHTML = "<b>BaklolLol</b>";
+
+//create element
+
+// meroButton.onclick = CallMeLater;
+// const dltBtn = document.querySelectorAll("button");
+// dltBtn[1].onclick = meroDelete;
+
+// function meroDelete() {
+//   const myDelete = document.querySelector("h2");
+//   myDelete.remove();
+// }
+
+// function CallMeLater() {
+//   const Creating = document.createElement("h2");
+
+//   Creating.innerText = "Thanos was right!";
+
+//   document.body.append(Creating);
+// }
+
+// meroButton.onclick = myThanos;
+
+// const heyRemove = document.getElementById("remove");
+
+// heyRemove.onclick = DeleteGardey;
+
+// function myThanos() {
+//   const newDocument = document.createElement("h2");
+//   newDocument.innerText = "Thanos was right!";
+
+//   document.body.prepend(newDocument);
+// }
+
+// function DeleteGardey() {
+//   const heQuery = document.querySelector("h2");
+//   heQuery.remove();
+// }
+
+const arr = [2, 4, 6, 8, 10];
+
+// const myFunc = (value, index) => {
+//   if (value === 6) {
+//     console.log("exist!");
+//   }
+// };
+
+// const result = arr.find((value, index) => {
+//   if (value > 4) {
+//     return value;
+//   }
+// });
+
+// console.log(result);
+
+// const result = arr.filter((value, index) => {
+//   if (value > 4) {
+//     return value;
+//   }
+// });
+
+// console.log(result);
+
+// const result = arr.every((value, index) => {
+//   if (value >= 2) {
+//     return value;
+//   }
+// });
+
+// const result = arr.some((value, index) => {
+//   return value > 4;
+// });
+
+// console.log(result);
+// for (let element of arr) {
+//   element += element + 3;
+//   console.log(element);
+// }
+//find method
+
+// const result = arr.forEach((value, index) => {
+//   return (value += 30);
+// });
+
+// console.log(result);
+// console.log(arr);
+
+// const result = arr.map((value, index) => {
+//   return (value += 20);
+// });
+
+// console.log(result);
+// console.log(arr);
+
+// const result = arr.reduce((prevValue, value, index) => {
+//   console.log(index);
+// });
+
+// console.log(result);
+// console.log(arr);
+
+// let words = ["hello", "world", "javascript", "reduce"];
+
+// const result = words.reduce((prevValue, value) => {
+//   return value.length > prevValue.length ? value : prevValue;
+// });
+
+// console.log(result);
+
+// Dom manipulation and its method
+// const ans = document.head;
+// console.log(ans);
+
+// const ans = document.body.lastElementChild;
+// console.log(ans);
+
+const result = document.getElementById("myIs");
+
+result.innerHTML = "Ronaldo kina gaye <b>KhadiMuluk</b>";
+// result.innerText = "Ronldo gaye khadi";
+
+const ans = document.getElementsByClassName("myyour");
+ans[0].innerHTML = "<b>Antman and the wasp Quantumania</b>";
+
+const newData = document.getElementsByTagName("span");
+newData[0].innerHTML = "<strong>I am always Happy!</strong>";
+
+const myEmail = document.getElementsByName("email");
+
+const myButton = document.getElementById("clickgara");
+myButton.innerText = "Save";
+myButton.style.background = "blue";
+myButton.style.color = "#fff";
+myButton.style.padding = "10px";
+myButton.style.border = "none";
+myButton.style.cursor = "pointer";
+
+myButton.onclick = myFunc;
+
+function myFunc() {
+  const Create = document.createElement("h2");
+  Create.innerHTML = "Thanos was <b>Right!</b>";
+  document.body.append(Create);
+}
