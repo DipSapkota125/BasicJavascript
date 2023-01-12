@@ -569,7 +569,7 @@
 //   heQuery.remove();
 // }
 
-const arr = [2, 4, 6, 8, 10];
+// const arr = [2, 4, 6, 8, 10];
 
 // const myFunc = (value, index) => {
 //   if (value === 6) {
@@ -649,7 +649,7 @@ const arr = [2, 4, 6, 8, 10];
 const result = document.getElementById("myIs");
 
 result.innerHTML = "Ronaldo kina gaye <b>KhadiMuluk</b>";
-// result.innerText = "Ronldo gaye khadi";
+result.innerText = "Ronldo gaye khadi";
 
 const ans = document.getElementsByClassName("myyour");
 ans[0].innerHTML = "<b>Antman and the wasp Quantumania</b>";
@@ -659,6 +659,9 @@ newData[0].innerHTML = "<strong>I am always Happy!</strong>";
 
 const myEmail = document.getElementsByName("email");
 
+const MyCountry = document.querySelector("#mycountry");
+MyCountry.innerHTML = "Nepal has adopted <b>Non-Alliagnance foregin Policy!</b";
+
 const myButton = document.getElementById("clickgara");
 myButton.innerText = "Save";
 myButton.style.background = "blue";
@@ -667,10 +670,148 @@ myButton.style.padding = "10px";
 myButton.style.border = "none";
 myButton.style.cursor = "pointer";
 
+const MyClear = document.querySelectorAll("button");
+
+MyClear[1].innerText = "Clear";
+for (let i = 0; i < MyClear.length; i++) {
+  MyClear[1].innerText = "Clear";
+  MyClear[1].style.background = "red";
+  MyClear[1].style.color = "#fff";
+  MyClear[1].style.border = "none";
+  MyClear[1].style.cursor = "pointer";
+  MyClear[1].style.padding = "10px";
+}
+
 myButton.onclick = myFunc;
+MyClear[1].onclick = DeleteGardeu;
+
+function DeleteGardeu() {
+  const PleaseDelete = document.querySelector("h2");
+  PleaseDelete.remove();
+}
 
 function myFunc() {
   const Create = document.createElement("h2");
   Create.innerHTML = "Thanos was <b>Right!</b>";
   document.body.append(Create);
 }
+
+//map = if you use map method it return new array by iterating the main array
+//forEach = if you use forEach method it cannot return anything it can iterating main only
+
+// let arr = [6, 8, 4, 2, 10, 12, 14];
+
+// const myMine = arr.reduce((total, value, index, arr) => {
+//   console.log(total, value, index, arr);
+//   return (total + value) / 2;
+// });
+
+// console.log(myMine);
+
+//for filter method
+// const heyFilter = arr.find((value, index) => {
+//   return value > 4;
+// });
+
+// console.log(heyFilter);
+
+// const myBull = arr.forEach((value, index, array) => {
+//   return (array[index] = value + 2);
+// });
+
+// console.log(myBull);
+
+// const heyLol = arr.reduce((accum, value) => {
+//   accum.push(value + 2);
+//   return accum;
+// }, []);
+
+// console.log(heyLol);
+
+// const lodButton = document.getElementById("myclick");
+
+// const MyLogo = document.getElementById("mylog");
+// const MyBox = document.getElementById("mybox");
+// const MyInput = document.querySelector("input");
+
+// lodButton.addEventListener("click", () => {
+//   MyBox.classList.add("classForDiv");
+// });
+
+// MyBox.addEventListener("mouseover", () => {
+//   lodButton.style.transform = "scale(1.1)";
+//   MyLogo.style.background = "gray";
+// });
+
+// function func3() {
+//   lodButton.style.transform = "scale(1.1)";
+//   MyLogo.style.background = "gray";
+// }
+
+// MyBox.addEventListener("mouseover", func3);
+
+// addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   lodButton.style.filter = "blur(10px)";
+// });
+
+// MyBox.addEventListener("dblclick", () => {
+//   document.body.style.background = "black";
+// });
+
+// MyBox.addEventListener("click", () => {
+//   document.body.style.background = "#fff";
+// });
+
+// MyInput.addEventListener("change", (e) => {
+//   e.preventDefault();
+//   console.log(e.target.value);
+// });
+
+//Advance Array MEthod
+
+//forEach
+//if we use for each it cannot return array(anything).it only iterate main array
+let arr = [6, 8, 4, 2, 10, 12];
+
+// const MyForEach = arr.forEach((value, index, array) => {
+//   return (array[index] = value + 2);
+// });
+
+// console.log(MyForEach);
+
+//map
+//if we use map method it returns new array after iterate main array;
+// const MyMap = arr.map((value, index, array) => {
+//   return (array[index] = value + 2);
+// });
+
+// console.log(MyMap);
+
+//filter
+// const MyFilter = arr.filter((value, index) => {
+//   // return value > 2;
+//   // return value % 2 === 0;//for even
+//   return value % 2 !==0 //for odd
+// });
+
+// console.log(MyFilter);
+
+//find method
+// const MyFind = arr.find((value, index) => {
+//   return value > 4;
+// });
+
+// console.log(MyFind);
+
+//reduce method
+// return single value outputma(sum,average)
+// const myReduce = arr.reduce((total, curValue, index) => {
+//   console.log(total, curValue, index);
+// total = total + curValue;
+// total = (total + curValue) / 2;
+
+// return total;
+// });
+
+// console.log(myReduce);
