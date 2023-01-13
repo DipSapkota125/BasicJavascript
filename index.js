@@ -646,55 +646,55 @@
 // const ans = document.body.lastElementChild;
 // console.log(ans);
 
-const result = document.getElementById("myIs");
+// const result = document.getElementById("myIs");
 
-result.innerHTML = "Ronaldo kina gaye <b>KhadiMuluk</b>";
-result.innerText = "Ronldo gaye khadi";
+// result.innerHTML = "Ronaldo kina gaye <b>KhadiMuluk</b>";
+// result.innerText = "Ronldo gaye khadi";
 
-const ans = document.getElementsByClassName("myyour");
-ans[0].innerHTML = "<b>Antman and the wasp Quantumania</b>";
+// const ans = document.getElementsByClassName("myyour");
+// ans[0].innerHTML = "<b>Antman and the wasp Quantumania</b>";
 
-const newData = document.getElementsByTagName("span");
-newData[0].innerHTML = "<strong>I am always Happy!</strong>";
+// const newData = document.getElementsByTagName("span");
+// newData[0].innerHTML = "<strong>I am always Happy!</strong>";
 
-const myEmail = document.getElementsByName("email");
+// const myEmail = document.getElementsByName("email");
 
-const MyCountry = document.querySelector("#mycountry");
-MyCountry.innerHTML = "Nepal has adopted <b>Non-Alliagnance foregin Policy!</b";
+// const MyCountry = document.querySelector("#mycountry");
+// MyCountry.innerHTML = "Nepal has adopted <b>Non-Alliagnance foregin Policy!</b";
 
-const myButton = document.getElementById("clickgara");
-myButton.innerText = "Save";
-myButton.style.background = "blue";
-myButton.style.color = "#fff";
-myButton.style.padding = "10px";
-myButton.style.border = "none";
-myButton.style.cursor = "pointer";
+// const myButton = document.getElementById("clickgara");
+// myButton.innerText = "Save";
+// myButton.style.background = "blue";
+// myButton.style.color = "#fff";
+// myButton.style.padding = "10px";
+// myButton.style.border = "none";
+// myButton.style.cursor = "pointer";
 
-const MyClear = document.querySelectorAll("button");
+// const MyClear = document.querySelectorAll("button");
 
-MyClear[1].innerText = "Clear";
-for (let i = 0; i < MyClear.length; i++) {
-  MyClear[1].innerText = "Clear";
-  MyClear[1].style.background = "red";
-  MyClear[1].style.color = "#fff";
-  MyClear[1].style.border = "none";
-  MyClear[1].style.cursor = "pointer";
-  MyClear[1].style.padding = "10px";
-}
+// MyClear[1].innerText = "Clear";
+// for (let i = 0; i < MyClear.length; i++) {
+//   MyClear[1].innerText = "Clear";
+//   MyClear[1].style.background = "red";
+//   MyClear[1].style.color = "#fff";
+//   MyClear[1].style.border = "none";
+//   MyClear[1].style.cursor = "pointer";
+//   MyClear[1].style.padding = "10px";
+// }
 
-myButton.onclick = myFunc;
-MyClear[1].onclick = DeleteGardeu;
+// myButton.onclick = myFunc;
+// MyClear[1].onclick = DeleteGardeu;
 
-function DeleteGardeu() {
-  const PleaseDelete = document.querySelector("h2");
-  PleaseDelete.remove();
-}
+// function DeleteGardeu() {
+//   const PleaseDelete = document.querySelector("h2");
+//   PleaseDelete.remove();
+// }
 
-function myFunc() {
-  const Create = document.createElement("h2");
-  Create.innerHTML = "Thanos was <b>Right!</b>";
-  document.body.append(Create);
-}
+// function myFunc() {
+//   const Create = document.createElement("h2");
+//   Create.innerHTML = "Thanos was <b>Right!</b>";
+//   document.body.append(Create);
+// }
 
 //map = if you use map method it return new array by iterating the main array
 //forEach = if you use forEach method it cannot return anything it can iterating main only
@@ -772,7 +772,7 @@ function myFunc() {
 
 //forEach
 //if we use for each it cannot return array(anything).it only iterate main array
-let arr = [6, 8, 4, 2, 10, 12];
+// let arr = [6, 8, 4, 2, 10, 12];
 
 // const MyForEach = arr.forEach((value, index, array) => {
 //   return (array[index] = value + 2);
@@ -815,3 +815,92 @@ let arr = [6, 8, 4, 2, 10, 12];
 // });
 
 // console.log(myReduce);
+
+//Event Listeners
+
+// const newClickBtn = document.getElementById("newclick");
+// const newHello = document.getElementById("hello");
+// const MyBox = document.getElementById("newbox");
+// const HeyInput = document.querySelector("input");
+
+// newClickBtn.addEventListener("click", () => {
+//   MyBox.classList.add("newBoxDiv");
+// });
+
+// newClickBtn.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   newClickBtn.style.background = "purple";
+// });
+
+// MyBox.addEventListener("mouseover", () => {
+//   newClickBtn.style.transform = "scale(1.1)";
+//   newHello.style.background = "gray";
+// });
+
+// MyBox.addEventListener("mouseout", () => {
+//   newClickBtn.style.transform = "";
+//   newHello.style.background = "";
+// });
+
+// addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   newClickBtn.style.filter = "blur(10px)";
+// });
+
+// MyBox.addEventListener("dblclick", () => {
+//   document.body.style.background = "black";
+// });
+
+// MyBox.addEventListener("click", () => {
+//   document.body.style.background = "#fff";
+// });
+
+// HeyInput.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+// });
+
+//add event listeners
+
+const NewClickBtn = document.getElementById("myclick");
+const NewBox = document.getElementById("mybox");
+const NewTag = document.getElementById("mytag");
+const MyInput = document.querySelector("input");
+
+NewClickBtn.addEventListener("click", () => {
+  NewBox.classList.add("newCssDiv");
+  //   NewBox.style.background = "purple";
+  //   NewBox.style.color = "#fff";
+  //   NewBox.style.margin = "20px";
+});
+
+NewBox.addEventListener("mouseover", () => {
+  NewClickBtn.style.transform = "scale(1.1)";
+  NewTag.style.background = "yellow";
+});
+
+NewBox.addEventListener("mouseout", () => {
+  NewClickBtn.style.transform = "";
+  NewTag.style.background = "";
+});
+
+MyInput.addEventListener("change", (e) => {
+  console.log(e.target.value);
+});
+
+NewBox.addEventListener("dblclick", () => {
+  document.body.style.background = "black";
+});
+
+NewBox.addEventListener("click", () => {
+  document.body.style.background = "#fff";
+});
+
+NewClickBtn.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  NewClickBtn.style.background = "pink";
+});
+
+addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  ``;
+});

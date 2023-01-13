@@ -3,3 +3,12 @@
   color: white;
   text-align: center;
 }
+
+.newCssDiv {
+  padding: 20px;
+  margin: 20px;
+  background-color: purple;
+  color: white;
+  width: 600px;
+  cursor: pointer;
+}
