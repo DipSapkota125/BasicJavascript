@@ -861,46 +861,445 @@
 
 //add event listeners
 
-const NewClickBtn = document.getElementById("myclick");
-const NewBox = document.getElementById("mybox");
-const NewTag = document.getElementById("mytag");
-const MyInput = document.querySelector("input");
+// const NewClickBtn = document.getElementById("myclick");
+// const NewBox = document.getElementById("mybox");
+// const NewTag = document.getElementById("mytag");
+// const MyInput = document.querySelector("input");
 
-NewClickBtn.addEventListener("click", () => {
-  NewBox.classList.add("newCssDiv");
-  //   NewBox.style.background = "purple";
-  //   NewBox.style.color = "#fff";
-  //   NewBox.style.margin = "20px";
-});
+// NewClickBtn.addEventListener("click", () => {
+//   NewBox.classList.add("newCssDiv");
+//   NewBox.style.background = "purple";
+//   NewBox.style.color = "#fff";
+//   NewBox.style.margin = "20px";
+// });
 
-NewBox.addEventListener("mouseover", () => {
-  NewClickBtn.style.transform = "scale(1.1)";
-  NewTag.style.background = "yellow";
-});
+// NewBox.addEventListener("mouseover", () => {
+//   NewClickBtn.style.transform = "scale(1.1)";
+//   NewTag.style.background = "yellow";
+// });
 
-NewBox.addEventListener("mouseout", () => {
-  NewClickBtn.style.transform = "";
-  NewTag.style.background = "";
-});
+// NewBox.addEventListener("mouseout", () => {
+//   NewClickBtn.style.transform = "";
+//   NewTag.style.background = "";
+// });
 
-MyInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
-});
+// MyInput.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+// });
 
-NewBox.addEventListener("dblclick", () => {
-  document.body.style.background = "black";
-});
+// NewBox.addEventListener("dblclick", () => {
+//   document.body.style.background = "black";
+// });
 
-NewBox.addEventListener("click", () => {
-  document.body.style.background = "#fff";
-});
+// NewBox.addEventListener("click", () => {
+//   document.body.style.background = "#fff";
+// });
 
-NewClickBtn.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  NewClickBtn.style.background = "pink";
-});
+// NewClickBtn.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   NewClickBtn.style.background = "pink";
+// });
 
-addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  ``;
-});
+// addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   ``;
+// });
+
+//local storage and session storage
+
+// const MyCLICKBtn = document.getElementById("myclick");
+// const HeyInput = document.getElementById("myinput");
+// const MyClear = document.getElementById("myclear");
+
+// const CallMeBack = () => {
+//   alert(HeyInput.value);
+//   //   sessionStorage.setItem("key", HeyInput.value);
+//   localStorage.setItem(
+//     "name",
+//     JSON.stringify({ fname: "Ram", lname: "thapa", age: 23 })
+//   );
+// };
+
+// const DeleteToken = () => {
+//   localStorage.clear();
+// };
+// MyCLICKBtn.addEventListener("click", CallMeBack);
+// MyClear.addEventListener("click", DeleteToken);
+
+// if (localStorage.getItem("name")) {
+//   alert(localStorage.getItem("name"));
+//   console.log(JSON.parse(localStorage.getItem("name")));
+//   console.log(JSON.parse(localStorage.getItem("name")));
+// } else {
+//   alert("xainata k dekheune");
+// }
+
+//math object
+// const a = Math.round(4.5);
+// console.log(a);  //returns 5
+
+// const a = Math.floor(4.8);
+// console.log(a);
+
+// const a = Math.ceil(4.2);
+// console.log(a);
+
+// const a = Math.trunc(7.4);
+// console.log(a);
+
+//
+
+// const a = Math.pow(2, 4);
+// console.log(a);
+
+// const a = Math.sign(-46);
+// console.log(a);
+
+// const a = Math.sqrt(625);
+// console.log(a);
+
+//abs return absolute value(postive only if we insert negative)
+
+// const a = Math.abs(-7);
+// console.log(a);
+
+// function myFunc(a, b) {
+//   return Math.abs(a - b);
+// }
+
+// console.log(myFunc(3, 8));
+
+// const angle = 90 * (Math.PI / 180);
+// console.log(Math.sin(angle));
+
+// const value = Math.min(65, 34, 2, 8, 12);
+// console.log(value);
+
+// const curDate = new Date("2019-05-12");
+// console.log(curDate);
+
+// let myDate = new Date();
+// console.log(myDate.toISOString());
+
+// setTimeout(() => {
+//   console.log("hello world!");
+// }, 2000);
+
+// let setId = setInterval(() => {
+//   console.log("Hello world!");
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(setId);
+// }, 1000);
+
+// setTimeout(() => {
+//   console.log("5 second have passed");
+// }, 5000);
+
+//math object
+
+// const value = Math.random();
+// console.log(value);
+
+//abs
+// const value = Math.abs(-5);
+// console.log(value);
+
+// function subtract(a, b) {
+//   return Math.abs(a - b);
+// }
+// console.log(subtract(2, 6));
+
+//trunk
+// const value = Math.trunc(5.8);
+// console.log(value);
+
+// const value = Math.round(4.5)
+// console.log(value)
+
+// const value = Math.floor(4.5);
+// console.log(value);
+
+// const value = Math.max(67, 23, 89, 5, 7, 8);
+// console.log(value);
+
+// const value = Math.min(6, 89, 45, 34, 2, 1);
+// console.log(value);
+
+// const value = Math.ceil(5.1);
+// console.log(value);
+
+// const value = Math.pow(2, 4);
+// console.log(value);
+
+// const value = Math.sqrt(625);
+// console.log(value);
+
+//Date in javascript
+// const myDate = new Date();
+// console.log(myDate);
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getTime());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getDate());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getDay());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getMilliseconds());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getFullYear());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getMinutes());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getSeconds());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.getMonth());
+
+// const oneByOne = new Date();
+// console.log(oneByOne.toISOString());
+
+//setTimeout
+// setTimeout(() => {
+//   console.log("Sabai janako atmale santipaos!");
+// }, 3000);
+
+// const setId = setInterval(() => {
+//   console.log("europe ma kabadi ko bhau ma bikne plan naleu sirkar!");
+// }, 2000);
+
+// setTimeout(() => {
+//   clearInterval(setId);
+//   console.log("lala ava dekhi naya plan ayo ktma ma");
+// }, 3000);
+
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// Person.prototype.greet = function() {
+//   console.log(`Hello, ${this.firstName} ${this.lastName}`);
+// }
+
+// let person1 = new Person("John", "Doe");
+// let person2 = new Person("Jane", "Smith");
+
+// console.log(person1.firstName);
+// console.log(person2.firstName);
+
+// person1.greet();
+// person2.greet();
+
+// function BankDetails(CustomerName, Balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.BankaccountNumber = Date.now();
+//   this.Balance = Balance;
+// }
+
+// const DipAccount = new BankDetails("Dip", 5000);
+// const rabinaAccount = new BankDetails("Rabina Subedi", 9000);
+
+// console.log(rabinaAccount);
+
+// const title = document.getElementById("title");
+// const description = document.getElementById("description");
+// const form = document.getElementById("form");
+// const container = document.querySelector(".container");
+
+//let tasks = []
+//showaddTasks
+
+// function showAllAddTask() {
+//   tasks.forEach((value, index) => {
+//     const div = document.createElement("div");
+//     div.setAttribute("class", "task");
+
+//     const innerDiv = document.createElement("div");
+//     div.append(innerDiv);
+
+//     const p = document.createElement("p");
+//     p.innerText = value.title;
+//     innerDiv.append(p);
+
+//     const span = document.createElement("span");
+//     span.innerText = value.description;
+//     innerDiv.append(span);
+
+//     const btn = document.createElement("button");
+//     btn.setAttribute("class", "deleteBtn");
+
+//     btn.innerText = "-";
+
+//     btn.addEventListener("click", () => {
+//       removeTasks();
+//       tasks.splice(index, 1);
+//       localStorage.setItem("tasks", JSON.stringify(tasks));
+//       showAllAddTask();
+//     });
+
+//     div.append(btn);
+//     container.append(div);
+//   });
+// }
+
+//removetasks
+
+// function removeTasks() {
+//   tasks.forEach(() => {
+//     const heyRemove = document.querySelector(".task");
+//     heyRemove.remove();
+//   });
+// }
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   removeTasks();
+//   tasks.push({
+//     title: title.value,
+//     description: description.value,
+//   });
+//   localStorage.setItem("tasks", JSON.stringify(tasks));
+//   showAllAddTask();
+// });
+
+//oops concept(constructor function)
+
+// const accoutForm = document.querySelector("#heyform");
+// const customerName = document.querySelector("#customerName");
+// const balance = document.querySelector("#balance");
+
+// const depoForm = document.querySelector("#depo");
+// const accountNumber = document.querySelector("#accountNumber");
+// const amount = document.getElementById("amount");
+
+// const withdrawForm = document.querySelector("#withdraw");
+// const checkAccountNumber = document.querySelector("#checkaccountNumber");
+// const withdrawAmount = document.querySelector("#withdrwamount");
+
+// let accounts = [];
+// accoutForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = new BankAccount(customerName.value, +balance.value);
+//   accounts.push(account);
+//   console.log(accounts);
+// });
+
+// depoForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const newValue = accounts.find(
+//     (account) => account.accountNumber === +accountNumber.value
+//   );
+//   newValue.deposit(+amount.value);
+//   console.log(accounts);
+// });
+
+// withdrawForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const prevValue = accounts.find(
+//     (account) => account.accountNumber === +checkAccountNumber.value
+//   );
+//   prevValue.withdraw(+withdrawAmount.value);
+//   console.log(accounts);
+// });
+
+// function BankAccount(customerName, balance = 0) {
+//   //properties
+//   this.customerName = customerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     // this.balance = this.balance + amount;
+//     this.balance += amount;
+//   };
+
+//   this.withdraw = (amount) => {
+//     // this.balance = this.balance + amount;
+//     this.balance -= amount;
+//   };
+// }
+
+// const result = new BankAccount("Dip", 5000);
+// const johnAccount = new BankAccount("John");
+
+// result.deposit(7000);
+// johnAccount.deposit(3000);
+
+// result.withdraw(2000);
+
+// console.log(result, johnAccount);
+
+//constructor function
+
+//for creating bank account
+// const Form1 = document.querySelector("#form1");
+// const customerName = document.querySelector("#customerName");
+// const Balance = document.querySelector("#balance");
+
+// //for deposit
+// const Form2 = document.querySelector("#form2");
+// const AccountNumber = document.querySelector("#accountNumber");
+// const amount = document.getElementById("amount");
+
+// //for withdraw
+// const Form3 = document.querySelector("#form3");
+// const CheckAccountNumber = document.querySelector("#checkaccountNumber");
+// const WithdrawAmount = document.getElementById("withdrawamount");
+
+// let accounts = [];
+
+// Form1.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = new BankAccount(customerName.value, +Balance.value);
+//   accounts.push(account);
+//   console.log(accounts);
+// });
+
+// Form3.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const updateValue = accounts.find(
+//     (account) => account.accountNumber === +CheckAccountNumber.value
+//   );
+//   updateValue.withdraw(+WithdrawAmount.value);
+
+//   console.log(accounts);
+// });
+// Form2.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const newValue = accounts.find(
+//     (account) => account.accountNumber === +AccountNumber.value
+//   );
+//   newValue.deposit(+amount.value);
+
+//   console.log(accounts);
+// });
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     this.balance = this.balance + amount;
+//   };
+//   this.withdraw = (amount) => {
+//     this.balance = this.balance - amount;
+//   };
+// }
+
+// const johnAccount = new BankAccount("John", 5000);
+// const dipAccount = new BankAccount("Dip");
+
+// johnAccount.deposit(9000);
+// dipAccount.deposit(6000);
+// dipAccount.withdraw(2000);
+// console.log(johnAccount, dipAccount);
