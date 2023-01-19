@@ -1303,3 +1303,175 @@
 // dipAccount.deposit(6000);
 // dipAccount.withdraw(2000);
 // console.log(johnAccount, dipAccount);
+
+//oop concept
+//making conctructor function
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     this.balance += amount;
+//   };
+
+//   this.withdraw = function (amount) {
+//     this.balance -= amount;
+//   };
+// }
+
+// const anilAccount = new BankAccount("anil kesari shah", 5000);
+// const DipAccount = new BankAccount("dip sapkota");
+
+// DipAccount.deposit(6700);
+// anilAccount.withdraw(500);
+
+// console.log(anilAccount, DipAccount);
+
+//protype in javascript
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// Person.prototype.greet = function () {
+//   console.log("Hello, " + this.firstName + " " + this.lastName);
+// };
+
+// const dipObj = new Person("Dip", "Sapkota");
+// dipObj.greet();
+
+// const johnObj = new Person("john", "Doe");
+// johnObj.greet();
+
+//for add
+// const Form1 = document.getElementById("form1");
+// const CustomerName = document.getElementById("customerName");
+// const AddAmount = document.getElementById("addAmount");
+
+// const Form2 = document.getElementById("form2");
+// const AccountNumber = document.getElementById("accountNumber1");
+// const DepoAmount = document.getElementById("depoAmount");
+
+// const Form3 = document.getElementById("form3");
+// const CheckAccountNumber = document.getElementById("checkAccountNumber");
+// const CheckAmount = document.getElementById("withdrawAmount");
+
+// let accounts = [];
+
+// Form1.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = new BankAccount(CustomerName.value, +AddAmount.value);
+//   accounts.push(account);
+//   console.log(accounts);
+// });
+
+// Form3.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const withDrawValue = accounts.find(
+//     (value) => value.accountNumber === +CheckAccountNumber.value
+//   );
+//   withDrawValue.withdraw(+CheckAmount.value);
+//   console.log(accounts);
+// });
+
+// Form2.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const DepoValue = accounts.find(
+//     (account) => account.accountNumber === +AccountNumber.value
+//   );
+//   DepoValue.deposit(+DepoAmount.value);
+//   console.log(accounts);
+// });
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     this.balance = this.balance + amount;
+//   };
+//   this.withdraw = function (amount) {
+//     this.balance -= amount;
+//   };
+// }
+
+// const ramAccount = new BankAccount("Ram", 3000);
+// const shyamAccount = new BankAccount("Shyam");
+
+// shyamAccount.deposit(4000);
+// shyamAccount.withdraw(500);
+
+// console.log(ramAccount, shyamAccount);
+
+//oop concept
+//constructor fuction convert into object
+
+//dom manipulation
+const Form1 = document.getElementById("form1");
+const CustomerName = document.getElementById("customerName");
+const Addamount = document.getElementById("addamount");
+
+//for deposit
+const Form2 = document.getElementById("form2");
+const DepoAccountNumber = document.getElementById("depoaccountNumber");
+const DepoAmount = document.getElementById("depoamount");
+
+//for withdraw
+const Form3 = document.getElementById("form3");
+const CheckAccountNumber = document.getElementById("checkaccountNumber");
+const WithdrawAmount = document.getElementById("withdrawamount");
+
+let accounts = [];
+Form1.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const account = new BankAccount(CustomerName.value, +Addamount.value);
+  accounts.push(account);
+
+  console.log(accounts);
+});
+
+//for deposit
+Form2.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const DepoValue = accounts.find(
+    (value, index) => value.accountNumber === +DepoAccountNumber.value
+  );
+  DepoValue.deposit(+DepoAmount.value);
+
+  console.log(accounts);
+});
+
+//for withdraw
+Form3.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const WithdrawValue = accounts.find(
+    (value, index) => value.accountNumber === +CheckAccountNumber.value
+  );
+  WithdrawValue.withdraw(+WithdrawAmount.value);
+  console.log(accounts);
+});
+
+function BankAccount(CustomerName, balance = 0) {
+  this.customerName = CustomerName;
+  this.accountNumber = Date.now();
+  this.balance = balance;
+
+  this.deposit = function (amount) {
+    this.balance = this.balance + amount;
+    // this.balance +=amount;
+  };
+  this.withdraw = function (amount) {
+    this.balance = this.balance - amount;
+    // this.balance -=amount
+  };
+}
+
+// const anilAccount = new BankAccount("Anil kesari shah", 5000);
+// const RamAccount = new BankAccount("Ram");
+
+// RamAccount.deposit(2000);
+// anilAccount.withdraw(1000);
+
+// console.log(anilAccount, RamAccount);
