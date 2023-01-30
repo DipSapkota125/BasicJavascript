@@ -1409,64 +1409,60 @@
 //constructor fuction convert into object
 
 //dom manipulation
-const Form1 = document.getElementById("form1");
-const CustomerName = document.getElementById("customerName");
-const Addamount = document.getElementById("addamount");
+// const Form1 = document.getElementById("form1");
+// const CustomerName = document.getElementById("customerName");
+// const Addamount = document.getElementById("addamount");
 
-//for deposit
-const Form2 = document.getElementById("form2");
-const DepoAccountNumber = document.getElementById("depoaccountNumber");
-const DepoAmount = document.getElementById("depoamount");
+// const Form2 = document.getElementById("form2");
+// const DepoAccountNumber = document.getElementById("depoaccountNumber");
+// const DepoAmount = document.getElementById("depoamount");
 
-//for withdraw
-const Form3 = document.getElementById("form3");
-const CheckAccountNumber = document.getElementById("checkaccountNumber");
-const WithdrawAmount = document.getElementById("withdrawamount");
+// const Form3 = document.getElementById("form3");
+// const CheckAccountNumber = document.getElementById("checkaccountNumber");
+// const WithdrawAmount = document.getElementById("withdrawamount");
 
-let accounts = [];
-Form1.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const account = new BankAccount(CustomerName.value, +Addamount.value);
-  accounts.push(account);
+// let accounts = [];
+// Form1.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = new BankAccount(CustomerName.value, +Addamount.value);
+//   accounts.push(account);
 
-  console.log(accounts);
-});
+//   console.log(accounts);
+// });
 
-//for deposit
-Form2.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const DepoValue = accounts.find(
-    (value, index) => value.accountNumber === +DepoAccountNumber.value
-  );
-  DepoValue.deposit(+DepoAmount.value);
+// Form2.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const DepoValue = accounts.find(
+//     (value, index) => value.accountNumber === +DepoAccountNumber.value
+//   );
+//   DepoValue.deposit(+DepoAmount.value);
 
-  console.log(accounts);
-});
+//   console.log(accounts);
+// });
 
-//for withdraw
-Form3.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const WithdrawValue = accounts.find(
-    (value, index) => value.accountNumber === +CheckAccountNumber.value
-  );
-  WithdrawValue.withdraw(+WithdrawAmount.value);
-  console.log(accounts);
-});
+// Form3.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const WithdrawValue = accounts.find(
+//     (value, index) => value.accountNumber === +CheckAccountNumber.value
+//   );
+//   WithdrawValue.withdraw(+WithdrawAmount.value);
+//   console.log(accounts);
+// });
 
-function BankAccount(CustomerName, balance = 0) {
-  this.customerName = CustomerName;
-  this.accountNumber = Date.now();
-  this.balance = balance;
+// function BankAccount(CustomerName, balance = 0) {
+//   this.customerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
 
-  this.deposit = function (amount) {
-    this.balance = this.balance + amount;
-    // this.balance +=amount;
-  };
-  this.withdraw = function (amount) {
-    this.balance = this.balance - amount;
-    // this.balance -=amount
-  };
-}
+//   this.deposit = function (amount) {
+//     this.balance = this.balance + amount;
+
+//   };
+//   this.withdraw = function (amount) {
+//     this.balance = this.balance - amount;
+
+//   };
+// }
 
 // const anilAccount = new BankAccount("Anil kesari shah", 5000);
 // const RamAccount = new BankAccount("Ram");
@@ -1475,3 +1471,1256 @@ function BankAccount(CustomerName, balance = 0) {
 // anilAccount.withdraw(1000);
 
 // console.log(anilAccount, RamAccount);
+
+//prototype concept in javascript
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNUmber = Date.now();
+//   this.balance = balance;
+
+// this.deposit = function (amount) {
+//   this.balance = this.balance + amount;
+// };
+
+// this.withdraw = function (amount) {
+//   this.balance = this.balance - amount;
+// };
+// }
+
+// BankAccount.prototype.add = function (amount) {
+//   this.balance += amount;
+//   console.log(`Added ${amount}, new balance:${this.balance}`);
+// };
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance = this.balance + amount;
+//   console.log(`Deposited ${amount}, new Balance : ${this.balance}`);
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   if (this.balance >= amount) {
+//     this.balance = this.balance - amount;
+//     console.log(`Withdraw ${amount},New Balance:${this.balance}`);
+//   } else {
+//     console.log(`Insufficient funds,current balance:${this.balance}`);
+//   }
+// };
+
+// const ramAccount = new BankAccount("Ram", 6000);
+
+// ramAccount.deposit(4500);
+// ramAccount.withdraw(11000);
+
+// console.log(ramAccount);
+
+// class BankAccount {
+//   CustomerName;
+//   AccountNumber;
+//   balance;
+
+//   constructor(CustomerName, balance = 0) {
+//     this.CustomerName = CustomerName;
+//     this.AccountNumber = Date.now();
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance += amount;
+//     console.log(`Deposited ${amount},Current Balance is :${this.balance}`);
+//   }
+
+//   withdraw(amount) {
+//     if (this.balance >= amount) {
+//       this.balance -= amount;
+//       console.log(`Withdraw ${amount},Current Balance is:${this.balance}`);
+//     } else {
+//       console.log(`Insufficient fund,Current balance is:${this.balance}`);
+//     }
+//   }
+// }
+
+// const hariAccount = new BankAccount("hari", 5000);
+// hariAccount.deposit(4000);
+// console.log(hariAccount);
+
+// class Person {
+//   name;
+//   age;
+
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   sayHello() {
+//     console.log(`Hey my name is :${this.name}, and my age is :${this.age}`);
+//   }
+// }
+
+// const person1 = new Person("hari", 23);
+// person1.sayHello();
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.sayHello = function () {
+    console.log(
+      `Hello, my name is ${this.name} and I am ${this.age} years old.`
+    );
+  };
+}
+
+let person1 = new Person("John", 30);
+let person2 = new Person("Amy", 25);
+
+// person1.sayHello();
+// person2.sayHello();
+
+//simple constructor function
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     this.balance += amount;
+//     console.log(`Deposited ${amount}, New Balance is :${this.balance}`);
+//   };
+
+//   this.withdraw = function (amount) {
+//     if (this.balance >= amount) {
+//       this.balance -= amount;
+//       console.log(`Withdraw ${amount}, New Balance is :${this.balance}`);
+//     } else {
+//       console.log(`Insufficient fund, New Balance is : ${this.balance}`);
+//     }
+//   };
+// }
+
+// const hariAccount = new BankAccount("Hari", 5000);
+// const anilAccount = new BankAccount("Anil Kesari Shah");
+// anilAccount.deposit(6700);
+// anilAccount.withdraw(2300);
+
+// console.log(hariAccount, anilAccount);
+
+//prototype chain
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+// this.deposit = function (amount) {
+//   this.balance = this.balance + amount;
+// };
+
+// this.withdraw = function (amount) {
+//   this.balance = this.balance - amount;
+// };
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance = this.balance + amount;
+//   console.log(`Deposited ${amount}, Current Balance is : ${this.balance}`);
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   if (this.balance >= amount) {
+//     this.balance = this.balance - amount;
+//     console.log(`Withdraw ${amount},Current balance is :${this.balance}`);
+//   } else {
+//     console.log(`Insufficient fund, Current balance is:${this.balance}`);
+//   }
+// };
+
+// const hariAccount = new BankAccount("Hari", 6000);
+// const anilAccount = new BankAccount("anil");
+// anilAccount.deposit(5000);
+
+// console.log(hariAccount, anilAccount);
+
+// class BankAccount {
+// CustomerName;
+// accountNumber;
+// balance;
+
+//   constructor(CustomerName, balance = 0) {
+//     this.CustomerName = CustomerName;
+//     this.accountNumber = Date.now();
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance += amount;
+//     console.log(`Deposited ${amount},Current Balance is:${this.balance}`);
+//   }
+
+//   withdraw(amount) {
+//     if (this.balance >= amount) {
+//       this.balance -= amount;
+//       console.log(`Withdraw ${amount},Current Balance is:${this.balance}`);
+//     } else {
+//       console.log(`Insufficient fund,Current balance is:${this.balance}`);
+//     }
+//   }
+// }
+// const ramAccount = new BankAccount("Ram", 5000);
+// ramAccount.deposit(6000);
+// console.log(ramAccount);
+
+// class Person {
+//   constructor(name, age) {
+//     (this.name = name), (this.age = age);
+//   }
+
+//   callme() {
+//     console.log(`My name is : ${this.name}, and age is : ${this.age}`);
+//   }
+// }
+
+// const ramaccount = new Person("ram", 18);
+// ramaccount.callme();
+
+// contructor function in javascript
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+//   console.log(`Deposited ${amount},Current balance is : ${this.balance}`);
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   if (this.balance >= amount) {
+//     this.balance -= amount;
+//     console.log(`Withdraw ${amount},Current balance is:${this.balance}`);
+//   } else {
+//     console.log(`Insufficient fund,Current balance is:${this.balance}`);
+//   }
+// };
+
+// const ramAccount = new BankAccount("Ram", 5000);
+// const hariAccount = new BankAccount("Hari");
+// const shyamAccount = new BankAccount("Shyam");
+
+// hariAccount.deposit(8000);
+// ramAccount.withdraw(6000);
+// shyamAccount.deposit(10000);
+
+// console.log(ramAccount, hariAccount);
+
+//class based oop(concept in javascript)
+
+//consructor
+//constructor is a special method
+// that is used to initialize the object,when it is created
+
+// class BankAccount {
+//   CustomerName;
+//   accountNumber;
+//   balance;
+
+//constructor
+//   constructor(CustomerName, balance = 0) {
+//     this.CustomerName = CustomerName;
+//     this.accountNumber = Date.now();
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance = this.balance + amount;
+//     console.log(`Deposited ${amount},Current balance is:${this.balance}`);
+//   }
+
+//   withdraw(amount) {
+//     if (this.balance >= amount) {
+//       this.balance = this.balance - amount;
+//       console.log(`Withdraw ${amount},Current balance is:${this.balance}`);
+//     } else {
+//       console.log(`Insufficient fund,Current balance is:${this.balance}`);
+//     }
+//   }
+// }
+// const shyamAccount = new BankAccount("shyam", 5000);
+// const gitaAccount = new BankAccount("Gita");
+
+// gitaAccount.deposit(5500);
+
+// console.log(shyamAccount, gitaAccount);
+
+//inheritance concept
+//we have dry principle
+//
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// function CurrentAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 50000;
+// }
+
+// CurrentAccount.prototype.takeBusinessLoan = function (amount) {
+//   console.log(`Take Business loan is: ${amount}`);
+// };
+
+// CurrentAccount.prototype = Object.create(BankAccount.prototype);
+
+// function SavingAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 10000;
+// }
+
+// SavingAccount.prototype = Object.create(BankAccount.prototype);
+
+// SavingAccount.prototype.personalLoan = function (amount) {
+//   console.log(`Take personal loan is: ${amount}`);
+// };
+
+// const kalikaAccunt = new BankAccount("Kalika", 5000);
+// const ramAccount = new CurrentAccount("Ram", 7000);
+// const hariAccount = new SavingAccount("Hari", 6000);
+// hariAccount.deposit(5000);
+// hariAccount.withdraw(100);
+// hariAccount.personalLoan(5000);
+// console.log(hariAccount);
+
+//for class
+// class BankAccount {
+//   constructor(CustomerName, balance = 0) {
+//     this.CustomerName = CustomerName;
+//     this.accountNUmber = Date.now();
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance += amount;
+//     console.log(`Deposited ${amount},current balance is:${this.balance}`);
+//   }
+//   withdraw(amount) {
+//     this.balance -= amount;
+//     console.log(`withdraw ${amount},current balance is:${this.balance}`);
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   transactionLimit = 50000;
+//   constructor(CustomerName, balance=0) {
+//     super(CustomerName, balance);
+//   }
+
+//   takeBusinessLoan(amount) {
+//     console.log(`Taking business loan is: ${amount}`);
+//   }
+// }
+
+// class SavingtAccount extends BankAccount {
+//   transactionLimit = 10000;
+//   constructor(CustomerName, balance) {
+//     super(CustomerName, balance);
+//   }
+
+//   takePersonalLoan(amount) {
+//     console.log(`Taking Personal loan is: ${amount}`);
+//   }
+// }
+
+// const ramAccount = new BankAccount("Ram", 5000);
+// const shyamAccount = new CurrentAccount("Shyam", 4000);
+// shyamAccount.deposit(3500);
+// shyamAccount.takeBusinessLoan(70000);
+
+// console.log(shyamAccount);
+
+//encapsulation
+// class BankAccount {
+//   #CustomerName;
+//   accountNumber;
+//   #balance;
+
+//   constructor(CustomerName, balance = 0) {
+//     this.#CustomerName = CustomerName;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//     console.log(`Deposited ${amount},Current balance is : ${this.#balance}`);
+//   }
+
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//   }
+
+//   set Name(value) {
+//     this.#CustomerName = value;
+//   }
+
+//   get Name() {
+//     return this.#CustomerName;
+//   }
+//   set balance(amount) {
+//     if (isNaN(amount)) {
+//       throw new Error("Invalid input");
+//     } else {
+//       this.#balance = amount;
+//       console.log(
+//         `Set amount ${amount}, Current balance is : ${this.#balance}`
+//       );
+//     }
+//   }
+
+//   get balance() {
+//     return this.#balance;
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   transactionLimit = 20000;
+//   constructor(CustomerNAme, balance = 0) {
+//     super(CustomerNAme, balance);
+//   }
+
+//   #calCulatingInterest() {
+//     console.log("interest calculating");
+//   }
+
+//   takePersonalLoan(amount) {
+//     this.#calCulatingInterest(amount);
+//     console.log(`Taking personal loan is : ${amount}`);
+//   }
+// }
+// class SavingAccount extends BankAccount {
+//   transactionLimit = 50000;
+//   constructor(CustomerName, balance = 0) {
+//     super(CustomerName, balance);
+//   }
+
+//   takeBusinessLoan(amount) {
+//     console.log(`Taking business Loan is : ${amount}`);
+//   }
+// }
+
+// const hariAccount = new BankAccount("hari", 5000);
+// const hariAccount = new SavingAccount("hari", 5000);
+// const hariAccount = new CurrentAccount("hari", 4500);
+// hariAccount.calCulatingInterest(45000);
+// hariAccount.Name = "HariLal";
+
+// console.log(hariAccount);
+
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// const hariAccount = new BankAccount("Hari", 6000);
+// console.log(hariAccount);
+
+//inheritance
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// function CurrentAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 50000;
+// }
+
+// function SavingAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 20000;
+// }
+
+// CurrentAccount.prototype.takeBusinessLoan = function (amount) {
+//   console.log(`Taking business loan is : ${amount}`);
+// };
+
+// CurrentAccount.prototype = Object.create(BankAccount.prototype);
+
+// const hariAccount = new BankAccount("Hari", 5000);
+// const hariAccount = new CurrentAccount("Hari", 5000);
+// hariAccount.deposit(5000);
+
+// hariAccount.takeBusinessLoan(50000);
+// console.log(hariAccount);
+
+//In the constructor function, this refers to the object that is being created by the constructor. By using the this keyword, properties and methods can be added to the object.
+
+// For example, in the BankAccount constructor,
+// this.ClientName = CustomerName assigns the
+// value of the CustomerName parameter to a new
+//  property called ClientName on the object that
+//  is being created. Similarly, this.accountNumber = Date.now()
+//  assigns the current timestamp to a new property
+//   called accountNumber on the object, and
+//    this.balance = balance assigns the value
+//     of the balance parameter to a new property
+//     called balance on the object.
+
+// This way the properties like ClientName, accountNumber, balance
+//  are added to the object that is being created by the
+//  constructor and can be accessed using the object
+//   name as shown in the log statement.
+// function BankAccount(CustomerName, balance = 0) {
+//   this.ClientName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+//   console.log(
+//     `Deposited amount ${amount},Current balance is : ${this.balance}`
+//   );
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   if (this.balance >= amount) {
+//     this.balance -= amount;
+//     console.log(`Withdraw ${amount},Current balance is : ${this.balance}`);
+//   }
+// };
+
+// function CurrentAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 50000;
+// }
+
+// CurrentAccount.prototype = Object.create(BankAccount.prototype);
+
+// CurrentAccount.prototype.takeBusinessLoan = function (amount) {
+//   console.log(`Taking business loan ${amount}`);
+// };
+
+// In JavaScript, inheritance can be achieved by
+//  using the prototype chain. The prototype
+//   chain allows an object to inherit properties
+//  and methods from its prototype,
+//   which is an object that it is linked to.
+
+// When you use the Object.create()
+// method to create a new object and set
+//  its prototype to another object, it creates
+//  an object that inherits from the prototype object.
+
+// In the code you provided, CurrentAccount.prototype =
+//  Object.create(BankAccount.prototype); creates a new object
+//  called CurrentAccount.prototype
+//  and sets its prototype to BankAccount.prototype.
+
+// So the CurrentAccount constructor
+//  function now inherits all of the
+//  properties and methods defined on the
+//   BankAccount.prototype object, this allows
+//    the CurrentAccount objects to access the
+//     properties and methods of BankAccount and
+//     also add their own properties and methods.
+
+// This is a way to achieve inheritance
+//  in javascript, as objects created with
+//   the CurrentAccount constructor now have
+//    access to the properties and methods defined on
+//     the BankAccount.prototype object.
+
+// function SavingAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance);
+//   this.transactionLimit = 20000;
+// }
+
+// SavingAccount.prototype = Object.create(BankAccount.prototype);
+
+// SavingAccount.prototype.takePersonalLoan = function (amount) {
+//   console.log(`Taking personal loan${amount}`);
+// };
+// const shyamAccount = new BankAccount("Shyam", 5600);
+// const amritAccount = new CurrentAccount("Amrit", 6700);
+// const amritAccount = new SavingAccount("amrit", 7000);
+// amritAccount.deposit(3400);
+// amritAccount.withdraw(1200);
+// amritAccount.takePersonalLoan(60000);
+// console.log(amritAccount);
+
+//important
+//class based inheritance
+// class BankAccount {
+//   #CustomerName;
+//   accountNumber;
+//   #balance;
+//   constructor(CustomerName, balance = 0) {
+//     this.#CustomerName = CustomerName;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//     console.log(`Deposited ${amount},Current balance is ${this.#balance}`);
+//   }
+
+//   withdraw(amount) {
+//     if (this.#balance >= amount) {
+//       this.#balance -= amount;
+//       console.log(`Withdraw ${amount},Current balance is ${this.#balance}`);
+//     }
+//   }
+
+//   set balance(amount) {
+//     if (isNaN(amount)) {
+//       throw new Error("Invlid  balance input!");
+//     } else {
+//       this.#balance = amount;
+//     }
+//   }
+
+//   set Name(value) {
+//     this.#CustomerName = value;
+//   }
+
+//   get Name() {
+//     return this.#CustomerName;
+//   }
+
+//   get balance() {
+//     return this.#balance;
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   constructor(CustomerName, balance = 0) {
+//     super(CustomerName, balance);
+//     this.transactionLimit = 50000;
+//   }
+
+//   takeBusinessLoan(amount) {
+//     console.log(`Taking business loan is : ${amount}`);
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   constructor(CustomerName, balance = 0) {
+//     super(CustomerName, balance);
+//     this.transactionLimit = 30000;
+//   }
+
+//   #calculateInterest(amount) {
+//     const interest = amount * 0.1; //10%
+//     console.log(`Interest rate is : ${interest}`);
+//   }
+
+//   takingPersonalLoan(amount) {
+//     this.#calculateInterest(amount);
+//     console.log(`Taking business loan: ${amount}`);
+//   }
+// }
+
+// const bhuwanAccount = new SavingAccount("bhuwan", 6000);
+// bhuwanAccount.takingPersonalLoan(40000);
+
+// console.log(bhuwanAccount);
+
+// bhuwanAccount.Name = "Gita";
+// console.log(bhuwanAccount.Name);
+
+//static
+
+// class Calculator {
+//   static add(a, b) {
+//     return a + b;
+//   }
+
+//   static subtract(a, b) {
+//     return a - b;
+//   }
+
+//   static multiply(a, b) {
+//     return a * b;
+//   }
+
+//   static divide(a, b) {
+//     return a / b;
+//   }
+// }
+
+// let result = Calculator.add(5, 10);  // result is 15
+// let result2 = Calculator.divide(10,2);  // result is 5
+
+// class MyData {
+//   static add(a, b) {
+//     return a + b;
+//   }
+// }
+
+// let result = MyData.add(7, 9);
+// console.log(result);
+
+// class User {
+//   static id = 1;
+//   constructor(name, age, income) {
+//     this.name = name;
+//     this.age = age;
+//     this.income = income;
+//     this.id = User.id++;
+//   }
+
+//   static compareByAge(a, b) {
+//     return a.age - b.age;
+//   }
+
+//   static compareByIncome(a, b) {
+//     return a.income - b.income;
+//   }
+// }
+
+// const user1 = new User("Ram", 70, 45000);
+// const user2 = new User("shyam", 10, 47000);
+// const user3 = new User("hari", 90, 23000);
+
+// const users = [user1, user2, user3];
+// users.sort((a, b) => a.age - b.age);
+// console.log(users);
+
+//for static method
+// const users = [user1, user2, user3];
+// users.sort(User.compareByIncome);
+
+// class Calculator {
+//   static add(a, b) {
+//     return a + b;
+//   }
+//   static subtract(a, b) {
+//     return Math.abs(a - b);
+//   }
+// }
+
+// let addition = Calculator.add(6, 9);
+// let subtraction = Calculator.subtract(6, 9);
+
+// console.log(subtraction);
+
+// users.sort((a, b) => a.age - b.age);
+// users.sort(User.sortByAge);
+// users.sort(User.sortByIncome);
+
+//function based oop
+// function BankAccount(CustomerName, balance = 0) {
+//   this.CustomerName = CustomerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+//child class(inheritance)
+// function CurrentAccount(CustomerName, balance = 0) {
+//   BankAccount.call(this, CustomerName, balance); //constructor calling
+//   this.trasactionLimit = 50000;
+// }
+
+// CurrentAccount.prototype = Object.create(BankAccount.prototype);
+// CurrentAccount.prototype.takeBusinessLoan = function (amount) {
+//   console.log(`Taking business loan is : ${amount}`);
+// };
+
+// const ramAccount = new BankAccount("Ram", 67000);
+// const ramAccount = new CurrentAccount("Ram", 56000);
+// ramAccount.deposit(4500);
+// ramAccount.takeBusinessLoan(60000);
+// console.log(ramAccount);
+
+///Class based oop and inheritance
+// class BankAccount {
+//   CustomerName;
+//   accountNumber;
+//   #balance;
+
+//   constructor(CustomerName, balance = 0) {
+//     this.CustomerName = CustomerName;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//     console.log(`Deposited ${amount},Current balance is:${this.#balance}`);
+//   }
+
+//   withdraw(amount) {
+//     if (this.#balance >= amount) {
+//       this.balance -= amount;
+//       console.log(`Withdraw ${amount},Current balance is:${this.#balance}`);
+//     } else {
+//       console.log(`Insufficient fund,You have only: ${this.#balance}`);
+//     }
+//   }
+
+//   //setter
+//   set balance(amount) {
+//     this.#balance = amount;
+//   }
+
+//   //getter
+//   get balance() {
+//     return this.#balance;
+//   }
+// }
+
+// //child class
+// class CurrentAccount extends BankAccount {
+//   constructor(CustomerName, balance = 0) {
+//     super(CustomerName, balance);
+//     this.transactionLimit = 50000;
+//   }
+
+//   #calculateInterest(amount) {
+//     const interest = amount * 0.1; //10%
+//     console.log(`Interest amount is : ${interest}`);
+//   }
+
+//   takeBusinessLoan(amount) {
+//     this.#calculateInterest(amount);
+//     console.log(`Taking business loan is : ${amount}`);
+//   }
+// }
+
+// const ramAccount = new BankAccount("Ram", 6000);
+// const ramAccount = new CurrentAccount("Ram", 6700);
+// ramAccount.takeBusinessLoan(90000);
+// console.log(ramAccount);
+
+//static property and method
+
+// class Calculator {
+//   static add(a, b) {
+//     return a + b;
+//   }
+
+//   static subtract(a, b) {
+//     return Math.abs(a - b);
+//   }
+// }
+
+// let addition = Calculator.add(5, 8);
+// let subtraction = Calculator.subtract(5, 8);
+
+// console.log(subtraction);
+
+// let ans = Math.random()
+// console.log(ans)
+
+// class User {
+//   static id = 1;
+//   constructor(name, age, income) {
+//     this.name = name;
+//     this.age = age;
+//     this.income = income;
+//     this.id = User.id++;
+//   }
+//   static sortByAge(a, b) {
+//     return a.age - b.age;
+//   }
+
+//   static sortByIncome(a, b) {
+//     return a.income - b.income;
+//   }
+// }
+
+// const user1 = new User("Ram", 23, 45000);
+// const user2 = new User("shyam", 18, 22000);
+// const user3 = new User("Ram", 17, 12000);
+
+// const users = [user1, user2, user3];
+// users.sort(()=>a.age-b.age)
+// users.sort(User.sortByAge)
+// users.sort(User.sortByIncome);
+
+// console.log(users);
+// function myFunc(name = "ram") {
+//   setTimeout(() => {
+//     for (let i = 0; i < 100; i++) {
+//       console.log(`${name} : ${i}`);
+//     }
+//   }, 4000);
+// }
+
+// myFunc();
+// alert("hello world!");
+// console.log("LastLine");
+
+// setTimeout(() => {
+//   console.log("hello world");
+// }, 5000);
+// alert("hey you!");
+
+//callback
+//  A callback function that filters an array and returns a new array containing only elements that pass a certain condition
+
+// function filterArr(arr, callback) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (callback(arr[i])) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let evenNumbers = filterArr(numbers, (num) => num % 2 === 0);
+// console.log(evenNumbers);
+
+// const arr = [1, 2, 3, 4, 5, 5, 6, 7, 8];
+
+// function calculator(arr = [], callback) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = callback(arr[i]);
+//     newArr.push(element);
+// newArr.push(callback(arr[i]*5))
+//   }
+//   console.log(newArr);
+// }
+
+// function multiply(a) {
+//   return a * 10;
+// }
+
+// function divide(a) {
+//   return a / 10;
+// }
+
+// calculator(arr, (a) => a * 10);
+// calculator(arr, (a) => a / 10);
+
+// calculator(arr, multiply);
+// calculator(arr, divide);
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// function calculation(arr = [], callback) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(callback(arr[i]));
+//   }
+//   console.log(newArr);
+// }
+
+// function multiply(a) {
+//   return a * 10;
+// }
+
+// function divide(a) {
+//   return a / 10;
+// }
+
+// calculation(arr, (a) => a * 10);
+
+//promise concept
+// const a = new Promise((resolve, reject) => {
+//   let success = true;
+//   if (success) resolve("Promise fulfilled!");
+//   else reject("Some technical error!");
+// });
+
+// a.then((para) => {
+//   console.log(para);
+// }).catch((error) => {
+//   console.log(error);
+// });
+
+//fetchData
+
+// let arr = [];
+// const fetchData = (arr = []) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       arr.push({ name: "Dip", age: 23 });
+//       if (arr.length > 0) {
+//         resolve("Promise fulfilled");
+//       } else {
+//         reject("Internal server error!");
+//       }
+//     }, 2000);
+//   });
+// };
+// fetchData(arr)
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .then(() => {
+//     console.log("5");
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(() => {
+//     console.log("Will work either");
+//   });
+
+// const h1 = document.querySelector("h1");
+// const url = "https://catfact.ninja/fact";
+
+// function fetchedData() {
+//   fetch(url)
+//     .then((res) => res.json())
+//     .then((data) => (h1.innerText = data.fact))
+//     .catch((err) => console.log(err))
+//     .finally(() => console.log("All done"));
+// }
+
+// fetchedData();
+
+//callback math of even numbers print example
+
+// let arr = [1, 5, 3, 2, 6, 7, 23, 45, 67, 8];
+
+// function calculation(numbers, callback) {
+//   let newArr = [];
+//   for (i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 === 0) {
+//       newArr.push(callback(numbers[i]));
+//     }
+//   }
+//   return newArr;
+// }
+
+// calculation(arr, (value) => {
+//   console.log(value);
+// });
+
+// const h1 = document.querySelector("h1");
+// const url = "https://catfact.ninja/fact";
+// function FetchedData() {
+//   fetch(url)
+//     .then((res) => res.json())
+//     .then((data) => (h1.innerText = data.fact))
+//     .catch((error) => console.log(error))
+//     .finally(() => console.log("All done"));
+// }
+
+// FetchedData();
+
+//callback function
+
+// let arr = [1, 5, 2, 7, 6, 8, 3];
+// function calculation(arr = [], callback) {
+//   let newArr = [];
+//   for (i = 0; i < arr.length; i++) {
+//     newArr.push(callback(arr[i]));
+//   }
+//   console.log(newArr);
+// }
+
+// function add(a) {
+//   return a + 6;
+// }
+
+// function multiply(a) {
+//   return a * 6;
+// }
+
+// calculation(arr, (a) => a * 5);
+// calculation(arr, add);
+// calculation(arr, multiply);
+
+//callback function(concept)
+// function calculation(a, b, callback) {
+//   let result = a + b;
+//   callback(result);
+// }
+// calculation(6, 9, (sum) => console.log(`The sum is:${sum}`));
+
+//calculation
+//Dry
+// let arr = [2, 4, 7, 8, 2, 9, 1, 4];
+// function calculation(arr = [], callback) {
+//   let newArr = [];
+//   for (i = 0; i < arr.length; i++) {
+//     const element = callback(arr[i]);
+//     newArr.push(element);
+//   }
+//   console.log(newArr);
+// }
+
+// function add(a) {
+//   return a + 5;
+// }
+
+// function subtract(a) {
+//   return a - 5;
+// }
+
+// calculation(arr, (a) => a + 5);
+// calculation(arr, (b)=>b-5);
+
+//promises concept
+// const a = new Promise((resolve, reject) => {
+// resolve("Promise fulfilled");
+//   reject("Technical error!");
+// });
+
+// a.then((msg) => console.log(msg))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("work eiter"));
+
+// let arr = [];
+// function fetchedData(arr = []) {
+//   return new Promise((resolve, reject) => {
+//     arr.push({ name: "ram", age: 23 });
+//     if (arr.length > 0) {
+//       resolve("Promise fullfilled!");
+//     } else {
+//       reject("Some technical error!");
+//     }
+//   });
+// }
+
+// fetchedData(arr)
+//   .then((msg) => console.log(msg))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("All done"));
+
+//fetchApi using async and await;
+
+// const h1 = document.querySelector("h1");
+// const url = "https://catfact.ninja/fact";
+
+// const fetchedData = async () => {
+//   try {
+//     const res = await fetch(url);
+//     const data = await res.json();
+//     h1.innerText = data.fact;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// fetchedData();
+
+// function fetchedData() {   //get //read //post //put// Restful api crud
+//   fetch(url)
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((data) => (h1.innerText = data.fact))
+//     .catch((error) => console.log(error));
+// }
+
+// fetchedData();
+
+// try {
+//   if (condition) {
+//     throw new Error("Custom Error");
+//   }
+// } catch (error) {
+//   console.log(error);
+// }
+
+//Bom in javascript
+// console.log(navigator)
+
+// navigator.geolocation.getCurrentPosition((d) => {
+//   console.log(d.coords.latitude);
+// });
+
+// console.log(location.protocol);
+// console.log(location.hostname);
+// console.log(location.port);
+// console.log(location.pathname);
+// console.log(location.href);
+
+// console.log(location.search);
+
+// const func1 = () => location.replace("https://www.youtube.com");
+
+// console.log(screen);
+
+// function calculateArea() {
+//   console.log(width); // Output: undefined
+//   console.log(height); // Output: undefined
+//   console.log(area); // ReferenceError: area is not defined
+//   var width = 5;
+//   let height = 10;
+//   const area = width * height;
+//   console.log(area); // Output: 50
+// }
+// calculateArea();
+
+//hoisting
+
+// console.log(myFunc(6, 7));
+// const myFunc = (a, b) => {
+//   return a * b;
+// };
+
+//bom
+// navigator.geolocation.getCurrentPosition((d) => {
+//   console.log(d.coords.longitude);
+// });
+
+// console.log(location.protocol);
+// console.log(location.hostname);
+// console.log(location.port);
+// console.log(location.pathname);
+
+// console.log(location.href);
+
+// const myFunc = () => location.assign("https://www.youtube.com");
+
+// console.log(history);
+// console.log(screen)
+
+//async and await in javascript(promise handling)
+// const h1 = document.querySelector("h1");
+// const url = "https://catfact.ninja/fact";
+
+// const fetchedData = async () => {
+//   try {
+//     const res = await fetch(url);
+
+//     const data = await res.json();
+
+//     h1.innerText = data.fact;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+
+// fetchedData();
+
+//normal function
